@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      header {
+        padding: 100px;
+        text-align: center;
+        background-color: #aaaaff;
+      }
+      #welcome {
+        background-color: #ccc;
+        text-align: center;
+        padding: 50px;
+      }
+      .arrow {
+        opacity: 0.5;
+        background-color: orange;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        z-index: 1000;
+        font-size: 3rem;
+        cursor: pointer;
+      }
+      .arrow:hover {
+        opacity: 1;
+        /*transition: .5s;*/
+      }
+
+      #products p {
+        position: relative;
+        opacity: 0.2;
+      }
+      #products p:nth-of-type(odd) {
+        left: -200px;
+      }
+      #products p:nth-of-type(even) {
+        left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Scroll</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing, elit. Error,
+        deserunt.
+      </p>
+      <button>clic</button>
+    </header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li class="bWelcome">Welcome</li>
+        <li>Products</li>
+        <li>Blog</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <section id="welcome">
+      <h2>Welcome</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing, elit. Hic deserunt
+        iure blanditiis repellendus ex labore voluptates expedita eos. Totam
+        amet minus laboriosam aliquam eveniet assumenda similique perferendis
+        earum consequuntur dolorum.
+      </p>
+    </section>
+    <section id="products">
+      <h2>Products</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+        atque, beatae eligendi, quod debitis eveniet libero delectus aut
+        corrupti laudantium aperiam dolore hic ducimus nobis at veniam.
+        Perspiciatis, vitae, explicabo.
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque id
+        sapiente possimus veritatis ex minima voluptas modi eligendi eius a
+        molestias repellat optio, rerum pariatur cum dolore distinctio quis
+        numquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint fuga
+        consequatur beatae voluptas inventore ad, ea assumenda nulla odit
+        accusamus voluptates quasi nemo recusandae nobis qui maxime, optio
+        asperiores animi.
+      </p>
+    </section>
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="entrades">
+        <article>
+          <h2>Article1</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+            placeat suscipit fuga explicabo voluptas, saepe dolore illo nostrum
+            est facilis nobis quae quia quam ab, fugit impedit ea, autem vel!
+          </p>
+        </article>
+        <article>
+          <h2>Article2</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+            placeat suscipit fuga explicabo voluptas, saepe dolore illo nostrum
+            est facilis nobis quae quia quam ab, fugit impedit ea, autem vel!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque id
+            sapiente possimus veritatis ex minima voluptas modi eligendi eius a
+            molestias repellat optio, rerum pariatur cum dolore distinctio quis
+            numquam.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque id
+            sapiente possimus veritatis ex minima voluptas modi eligendi eius a
+            molestias repellat optio, rerum pariatur cum dolore distinctio quis
+            numquam.
+          </p>
+        </article>
+        <article>
+          <h3>Article3</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
+            beatae eos voluptatem repudiandae atque molestiae libero dolores
+            laudantium, molestias eveniet vel aspernatur omnis culpa quaerat
+            animi. Ad aliquam voluptas voluptatem.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque id
+            sapiente possimus veritatis ex minima voluptas modi eligendi eius a
+            molestias repellat optio, rerum pariatur cum dolore distinctio quis
+            numquam.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque id
+            sapiente possimus veritatis ex minima voluptas modi eligendi eius a
+            molestias repellat optio, rerum pariatur cum dolore distinctio quis
+            numquam.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <h3>Keep in touch</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Iure,
+        voluptates omnis eius perspiciatis incidunt, vel rerum quae consequuntur
+        molestiae quidem accusantium a reprehenderit quasi atque architecto
+        soluta et aliquid unde!
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni suscipit
+        eius ipsam repellat natus dicta sit odit aliquid expedita accusantium
+        laboriosam adipisci fugit eos doloremque minus recusandae consequuntur,
+        repudiandae, cupiditate consectetur sunt neque harum consequatur dolorem
+        numquam! Doloremque tempore provident dolores quidem dolor nisi dolorem
+        alias, veritatis sint aut sed!
+      </p>
+    </section>
+    <div class="arrow">&#8593;</div>
+    <script>
+      $(".arrow").hide();
+      $(document).scroll(function () {
+        console.log("has fet scroll");
+        if ($(document).scrollTop() > 100) {
+          $(".arrow").fadeIn(500);
+        } else {
+          $(".arrow").fadeOut(500);
+        }
+
+        if ($(document).scrollTop() > $("#products").offset().top - 300) {
+          $("#products p").animate(
+            {
+              opacity: 1,
+              left: 0,
+            },
+            1000
+          );
+        }
+      });
+
+      $("button").click(function () {
+        console.log("Distància del document:");
+        console.log($(document).scrollTop());
+        console.log("Distància de Welcome:");
+        console.log($("#welcome").offset().top);
+      });
+
+      $(".arrow").click(function () {
+        $("html").animate(
+          {
+            scrollTop: 0,
+          },
+          1000
+        );
+      });
+
+      $(".bWelcome").click(function () {
+        $("html").animate(
+          {
+            scrollTop: $("#welcome").offset().top,
+          },
+          1000
+        );
+      });
+    </script>
+  </body>
+</html>
