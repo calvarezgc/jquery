@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="pels, pelspels, perruqueria, unisex, pentinats, tendències, perruquer, perruquera, estilisme"
+    />
+    <title>Perruqueria Pels Pèl</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Pels Pèls</h1>
+      <h2>perruqueria unisex des de 1970</h2>
+    </header>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Inici</a></li>
+        <li><a href="#filosofia"> Filosofia</a></li>
+        <li>
+          <a href="#filosofia">Serveis</a>
+        </li>
+        <li><a href="#">Contacte</a></li>
+      </ul>
+    </nav>
+
+    <section id="filosofia" class="filosofia">
+      <h2>Filosofia</h2>
+      <h3>Propera, natural i sostenible</h3>
+      <p>
+        Amb Nous Aires neix un <strong> nou concepte de perruqueria</strong>, la nostra filosofia és mimar al màxim el
+        client i el <strong> medi ambient</strong>, per aquest motiu utilitzem <strong>productes naturals</strong> ,
+        fabricats amb plena consciència. Tot això embolcallat amb la perruqueria actual i els estils més innovadors.
+      </p>
+
+      <p>
+        Volem aportar el nostre gra de sorra fent ús d’aquells productes que
+        <strong>tinguin valors de sostenibilitat</strong>: accions de compensació en el procés de fabricació i en la
+        responsabilitat mediambiental, social i econòmica.
+      </p>
+
+      <p>
+        Cada un dels productes són escollits per aconseguir el millor resultat segons el tipus de cabell, de pell i de
+        resultat desitjat. Darrere de tots aquests productes hi ha
+        <strong>coneixement científic, talent tècnic i creatiu.</strong>
+      </p>
+
+      <div class="container_imatge">
+        <figure>
+          <img
+            class="imatge"
+            width="640px"
+            height="425px"
+            src="https://staformacion.org/ifcd0110/uf1302/pe01.jpg"
+            alt="pelu"
+          />
+          <figcaption>
+            Tot per la teva comoditat |<small>
+              Foto:
+              <a
+                href="https://pixabay.com/es/users/theorivierenlaan-5288076/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2345701"
+                target="_blank"
+                >TheoRivierenlaan,</a
+              ></small
+            >
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="serveis" class="serveis">
+      <h2>Serveis</h2>
+      <table border="1" class="table__serveis">
+        <tr>
+          <td class="table__serveis__col">Perruqueria</td>
+          <td>Talls de cabell moderns per a home i dona</td>
+        </tr>
+        <tr>
+          <td class="table__serveis__col">Estètica</td>
+          <td>Vine a mimar-te! Vine a provar els nostres tractaments i gaudeix d’un moment especial i únic.</td>
+        </tr>
+        <tr>
+          <td class="table__serveis__col">Assessoria</td>
+          <td>
+            No saps quin estil de tall et queda millor o quin color de cabell t’afavoreix més? Vine a fer-te una
+            assessoria d’imatge i veuràs com tots aquests problemes s’han acabat
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="loremIpsumX">
+      <h2>Lorems Ipsum</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perspiciatis dignissimos neque corporis libero
+        cum in deleniti praesentium, quae veniam!
+      </p>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam unde, error cum earum eligendi odio.</p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur illo reiciendis? Explicabo itaque eos
+        quia, enim fuga laboriosam excepturi.
+      </p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </section>
+
+    <section class="contacte">
+      <form class="formulari" action="mailto:correu@correu.com" method="post">
+        <h2>contacte</h2>
+        <div class="container">
+          <div class="flex-item"><input type="text" name="name" placeholder="Nom" id="name"" /></div>
+          <div class="flex-item">
+            <input type="email" name="email" placeholder="e-mail" id="email" />
+          </div>
+        </div>
+        <textarea name="observacions" id="observacions" cols="30" rows="10" placeholder="Observacions"></textarea>
+        <input type="submit" value="Enviar" />
+      </form>
+    </section>
+
+    <footer>
+      <small>CopyRight 2022 – Tots els drets reservats</small>
+      <p>
+        C/ Santa Eulàlia 22 - 08902 L'Hospitalet de Ll. Barcelona – Tel.
+        <a
+          href="933 31
+        50 96"
+          >933 31 50 96</a
+        >
+      </p>
+    </footer>
+
+    <div class="arrow">&#8593;</div>
+
+    <script>
+      //Escondemos la flecha
+      $(".arrow").hide();
+
+      //Cuando hagamos 100px de scroll en el documento aparece la flecha
+      $(document).scroll(function () {
+        if ($(document).scrollTop() > 100) {
+          $(".arrow").show(1000);
+        }
+      });
+
+      //Al hacer clic en la flecha hace scroll hasta arriba del todo en 1s
+      $(".arrow").click(function () {
+        $("html").animate(
+          {
+            scrollTop: 0,
+          },
+          1000
+        );
+      });
+
+      // cuando hagas scroll en el documento que la seccion loremIpsumX cuando falten 450px para llegar que sus p aparezcan en 5 segundos
+      $(document).scroll(function () {
+        if ($(document).scrollTop() > $("#loremIpsumX").offset().top - 450) {
+          $("#loremIpsumX p").animate(
+            {
+              opacity: 1,
+              left: 0,
+            },
+            5000
+          );
+        }
+      });
+
+      //Al hacer clic en el h1 filosofia se desplaza 300px
+      $("#filosofia h2").click(function () {
+        $("html").animate(
+          {
+            scrollTop: 300,
+          },
+          1000
+        );
+      });
+
+      //Al hacer clic en el h2 llamado Contacte que cambie el color de fondo de toda su seccion
+      $(".contacte h2").click(function () {
+        $(".contacte").css({
+          backgroundColor: "#be368e",
+        });
+      });
+
+      //Si nos desplazamos mas de 200px que la seccion de la imagen desaparezca en 2 segundos y si no que aparezca
+      $(document).scroll(function () {
+        if ($(document).scrollTop() < 200) {
+          $(".container_imatge").fadeIn(2000);
+        } else {
+          $(".container_imatge").fadeOut(2000);
+        }
+      });
+    </script>
+  </body>
+</html>

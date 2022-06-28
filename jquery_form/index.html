@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <footer>
+      <form action="mailto:correu@correu.com" method="post">
+        <h2>Get in Touch</h2>
+        <h3>Use the contact form below to get in touch</h3>
+        <div class="container">
+          <div class="flex1">
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Name" id="name"" />
+          </div>
+          <div class="flex1">
+            <label for="email">Email Adress:</label>
+            <input type="email" name="email" placeholder="Email" id="email" />
+          </div>
+          <div class="flex1">
+            <label for="website">Website:</label>
+            <input type="url" name="website" placeholder="Website" id="website"" />
+          </div>
+        </div>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+        <input type="submit" class="boton" value="SEND MESSAGE" />
+      </form>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        $("input").focus(function () {
+          $(this).css("background-color", "#66FA4C");
+        });
+        $("input").blur(function () {
+          $(this).css("background-color", "#A7ED9B");
+        });
+        $("textarea").focus(function () {
+          $(this).css("background-color", "#66FA4C");
+        });
+        $("textarea").blur(function () {
+          $(this).css("background-color", "#A7ED9B");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+/**********CABECERA**********/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+
+header {
+  padding: 70px 20px;
+  background-image: linear-gradient(#0008, #0008), url(https://staformacion.org/ifcd0110/uf1302/pe01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+header h1 {
+  color: #be368e;
+  font-size: 48px;
+}
+
+header h2 {
+  color: white;
+}
+
+/**********MENU**********/
+
+.menu {
+  text-align: center;
+  background-color: #888;
+}
+
+.menu li {
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid black;
+}
+
+.menu a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/**********SECCIO FILOSOFIA**********/
+.filosofia {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.filosofia h2 {
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.filosofia h2 p {
+  margin-bottom: 16px;
+}
+
+.filosofia h3 {
+  margin-bottom: 20px;
+}
+
+.filosofia p {
+  text-align: left;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.container_imatge {
+  max-width: 600px;
+}
+
+.imatge {
+  width: 100%;
+  height: initial;
+}
+
+/**********SECCIO SERVEIS**********/
+.serveis {
+  text-align: center;
+  padding: 50px 20px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjiOZKXIJOpd86An1h5BkEq0hZpFo_vM8Igw&usqp=CAU);
+}
+
+.serveis h2 {
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.table__serveis {
+  background-color: #888;
+  color: white;
+  max-width: 600px;
+  margin: auto;
+}
+
+.table__serveis__col {
+  background-color: rgb(0, 0, 0);
+}
+
+.table__serveis td {
+  padding: 10px;
+}
+
+.table__serveis__col td:first-child {
+  background-color: #555;
+}
+
+/**********FOOTER**********/
+
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #888;
+  color: white;
+  font-size: 12px;
+}
+
+/***********SECCIO CONTACTE*************/
+
+.contacte {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contacte h2 {
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.formulari {
+  max-width: 600px;
+  margin: auto;
+}
+
+.flex-item > * {
+  margin-bottom: 10px;
+}
+
+::placeholder {
+  color: black;
+  opacity: 0.6;
+}
+
+.formulari input,
+.formulari textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.formulari input[type="submit"] {
+  background-color: #be368e;
+  color: white;
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  width: 100px;
+  border: none;
+}
+
+@media (min-width: 800px) {
+  .menu {
+    width: initial;
+    padding: 10px;
+  }
+
+  .menu ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .menu li {
+    border-bottom: initial;
+  }
+}
+
+/* SCROLL */
+.arrow {
+  background-color: #be368e;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1000;
+  font-size: 3rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+arrow:hover {
+  opacity: 1;
+}
+
+#loremIpsumX {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#loremIpsumX h2 {
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+#loremIpsumX p {
+  text-align: center;
+  line-height: 28px;
+  margin-bottom: 20px;
+  position: relative;
+  opacity: 0.2;
+}
+
+#loremIpsumX p:nth-of-type(odd) {
+  left: -300px;
+}
+
+#loremIpsumX p:nth-of-type(even) {
+  left: 500px;
+}

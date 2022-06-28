@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Vertical Menu */
+
+.menuVertical {
+  width: 300px;
+  background-color: #ddd;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.menuVertical li {
+  list-style: none;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.menuVertical li:hover {
+  background-color: #777;
+}
+
+.menuVertical li:hover > a {
+  color: white;
+}
+.menuVertical a {
+  text-decoration: none;
+  color: black;
+}
+
+.menuVertical .active {
+  background-color: green;
+}
+
+.menuVertical .active > a {
+  color: white;
+}
+
+/* Horizontal Menu */
+
+.menuHorizontal {
+  background-color: #333;
+  font-family: sans-serif;
+}
+
+.menuHorizontal ul {
+  display: flex;
+  list-style: none;
+}
+
+.menuHorizontal li {
+  padding: 10px 15px;
+}
+
+.menuHorizontal a {
+  text-decoration: none;
+  color: white;
+}
+
+.menuHorizontal .active {
+  background-color: green;
+}
+
+.menuVertical .active > a {
+  color: white;
+}
+
+button {
+  margin: 5px;
+}

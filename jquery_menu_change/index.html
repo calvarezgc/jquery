@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cambio estilo menu con Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <button class="btnV">Vertical Menu</button>
+      <button class="btnH">Horizontal Menu</button>
+    </div>
+
+    <nav id="menu">
+      <ul>
+        <li class="active"><a href="#"> Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      $(".btnV").click(function () {
+        $("#menu").removeClass("menuHorizontal");
+
+        $("#menu").addClass("menuVertical");
+      });
+
+      $(".btnH").click(function () {
+        $("#menu").removeClass("menuVertical");
+
+        $("#menu").addClass("menuHorizontal");
+      });
+    </script>
+  </body>
+</html>
